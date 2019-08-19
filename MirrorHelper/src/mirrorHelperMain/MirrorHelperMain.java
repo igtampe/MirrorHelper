@@ -142,7 +142,6 @@ public class MirrorHelperMain {
 				
 				echo("It's Big Brain Time");
 				
-				//ok now we've got to parse the coordinates into three sets
 				String[] Coord1;
 				String[] Coord2;
 				String[] PasteCoord;
@@ -156,6 +155,7 @@ public class MirrorHelperMain {
 				int PasteCoordY;
 				int PasteCoordZ;
 				
+				//ok now we've got to parse the coordinates into three sets
 				try {					
 					Coord1 = Coord1TXB.getText().split(",");
 					Coord2 = Coord2TXB.getText().split(",");
@@ -168,7 +168,7 @@ public class MirrorHelperMain {
 					
 				}
 				
-				
+				//Convert all of this stuff into Integers.
 				try {
 					Coord1X = Integer.parseInt(Coord1[0]);
 					Coord1Y = Integer.parseInt(Coord1[1]);
@@ -269,12 +269,11 @@ public class MirrorHelperMain {
 					
 				}
 				
-				
+				//Put the commands temp into an array
 				Commands=CommandsTemp.split("~");
-				CopyWindow.main(Commands);
 				
-				//Then we have to output it somehow. For now lets use console, then we can deal with commandos
-								
+				//call the copy window using the array, so it can output it.
+				CopyWindow.main(Commands);
 				System.out.println("haha you has pressed the button");
 			}
 		});
